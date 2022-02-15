@@ -23,7 +23,7 @@
             <tbody>
               <template v-if="unpaidInvoices.length">
                 <tr v-for="invoice in unpaidInvoices" :key="invoice.id">
-                  <td>{{ invoice.invoice_number }}</td>
+                  <td>{{ invoice.id }}</td>
                   <td>{{ invoice.client_name }}</td>
                   <td>{{ invoice.gross_amount }}</td>
                   <td>{{ invoice.get_due_date_formatted }}</td>
