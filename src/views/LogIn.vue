@@ -98,7 +98,7 @@ export default {
           }
         })
 
-      axios.get("/api/v1/users/me/").then((response) => {
+      axios.get("https://erp-dashboard.herokuapp.com/api/v1/api/v1/users/me/").then((response) => {
         this.$store.commit("setUser", {
           username: response.data.username,
           id: response.data.id,
