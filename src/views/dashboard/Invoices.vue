@@ -7,7 +7,7 @@
         </li>
         <li class="is-active">
           <router-link :to="{ name: 'Invoices' }" aria-current="true"
-            >Invoices</router-link
+            >Purchase orders</router-link
           >
         </li>
       </ul>
@@ -15,7 +15,7 @@
 
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h1 class="title">Invoices</h1>
+        <h1 class="title">Purchase orders</h1>
       </div>
 
       <div class="column is-12">
@@ -23,11 +23,11 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Client</th>
+              <th>Vendor</th>
               <th>Amount</th>
-              <th>Due date</th>
+              <!-- <th>Due date</th> -->
               <th>Is paid</th>
-              <th></th>
+              <th>View</th>
             </tr>
           </thead>
 
@@ -36,7 +36,7 @@
               <td>{{ invoice.id }}</td>
               <td>{{ invoice.client_name }}</td>
               <td>{{ invoice.gross_amount }}</td>
-              <td>{{ invoice.get_due_date_formatted }}</td>
+              <!-- <td>{{ invoice.get_due_date_formatted }}</td> -->
               <td>{{ getStatusLabel(invoice) }}</td>
               <td>
                 <router-link

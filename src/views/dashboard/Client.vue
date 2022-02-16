@@ -5,7 +5,7 @@
         <li>
           <router-link :to="{ name: 'Dashboard' }">Dashboard</router-link>
         </li>
-        <li><router-link :to="{ name: 'Clients' }">Clients</router-link></li>
+        <li><router-link :to="{ name: 'Clients' }">Vendors</router-link></li>
         <li class="is-active">
           <router-link
             :to="{ name: 'Client', params: { id: client.id } }"
@@ -28,7 +28,7 @@
       </div>
 
       <div class="column is-12">
-        <h2 class="subtitle">Contact details</h2>
+        <h2 class="subtitle">Vendor details</h2>
 
         <p>
           <strong>{{ client.name }}</strong>
@@ -44,23 +44,23 @@
 
       <div class="column is-12" v-if="unpaidInvoices.length">
         <div class="box">
-          <h2 class="subtitle">Unpaid invoices</h2>
+          <h2 class="subtitle">Unpaid purchase order</h2>
 
           <table class="table is-fullwidth">
             <thead>
               <tr>
                 <th>#</th>
                 <th>Amount</th>
-                <th>Due date</th>
+                <!-- <th>Due date</th> -->
                 <th></th>
               </tr>
             </thead>
 
             <tbody>
               <tr v-for="invoice in unpaidInvoices" v-bind:key="invoice.id">
-                <td>{{ invoice.invoice_number }}</td>
+                <td>{{ invoice.id }}</td>
                 <td>{{ invoice.gross_amount }}</td>
-                <td>{{ invoice.get_due_date_formatted }}</td>
+                <!-- <td>{{ invoice.get_due_date_formatted }}</td> -->
                 <td>
                   <router-link
                     :to="{ name: 'Invoice', params: { id: invoice.id } }"

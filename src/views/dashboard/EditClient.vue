@@ -5,7 +5,7 @@
         <li>
           <router-link :to="{ name: 'Dashboard' }">Dashboard</router-link>
         </li>
-        <li><router-link :to="{ name: 'Clients' }">Clients</router-link></li>
+        <li><router-link :to="{ name: 'Clients' }">Vendors</router-link></li>
         <li>
           <router-link :to="{ name: 'Client', params: { id: client.id } }">{{
             client.name
@@ -41,6 +41,19 @@
             />
           </div>
         </div>
+        <div class="field">
+          <label>Supplier Code</label>
+
+          <div class="control">
+            <input
+              type="number"
+              class="input"
+              v-model="client.supplier_code"
+              placeholder="Supplier Code"
+            />
+          </div>
+        </div>
+        
 
         <div class="field">
           <label>Email</label>
@@ -113,6 +126,19 @@
               class="input"
               v-model="client.place"
               placeholder="Place"
+              required
+            />
+          </div>
+        </div><div class="field">
+          <label>City</label>
+
+          <div class="control">
+            <input
+              type="text"
+              name="place"
+              class="input"
+              v-model="client.city"
+              placeholder="City"
               required
             />
           </div>

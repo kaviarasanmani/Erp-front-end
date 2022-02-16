@@ -3,7 +3,7 @@
     <nav class="breadcrumb" aria-label="breadcrumbs">
       <ul>
         <li><router-link to="/dashboard">Dashboard</router-link></li>
-        <li><router-link to="/dashboard/clients">Clients</router-link></li>
+        <li><router-link to="/dashboard/clients">Vendors</router-link></li>
         <li class="is-active">
           <router-link to="/dashboard/clients/add" aria-current="true"
             >Add</router-link
@@ -14,12 +14,13 @@
 
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h1 class="title">Add client</h1>
+        <h1 class="title">Add Vendors</h1>
       </div>
-
+    
       <div class="column is-6">
         <div class="field">
           <label>Name</label>
+          
 
           <div class="control">
             <input
@@ -32,7 +33,20 @@
             />
           </div>
         </div>
+        <div class="field">
+          <label>Supplier Code</label>
 
+          <div class="control">
+            <input
+              type="number"
+              name="name"
+              class="input"
+              v-model="client.supplier_code"
+              placeholder="supplier Code"
+              required
+            />
+          </div>
+        </div>
         <div class="field">
           <label>Email</label>
 
@@ -108,7 +122,20 @@
             />
           </div>
         </div>
+<div class="field">
+          <label>city</label>
 
+          <div class="control">
+            <input
+              type="text"
+              name="place"
+              class="input"
+              v-model="client.city"
+              placeholder="city"
+              required
+            />
+          </div>
+        </div>
         <div class="field">
           <label>Country</label>
 
@@ -147,6 +174,7 @@ export default {
   data() {
     return {
       client: {
+        supplier_code:"",
         name: "",
         email: "",
         address1: "",

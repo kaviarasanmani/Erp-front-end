@@ -5,7 +5,7 @@
         <li>
           <router-link :to="{ name: 'Dashboard' }">Dashboard</router-link>
         </li>
-        <li><router-link :to="{ name: 'Invoices' }">Invoices</router-link></li>
+        <li><router-link :to="{ name: 'Invoices' }">Purchase orders</router-link></li>
         <li class="is-active">
           <router-link :to="{ name: 'AddInvoice' }" aria-current="true"
             >Add</router-link
@@ -16,15 +16,15 @@
 
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h1 class="title">Add invoice</h1>
+        <h1 class="title">Add Purchase order</h1>
       </div>
 
       <div class="column is-12">
-        <h2 class="is-size-5 mb-4">Client</h2>
+        <h2 class="is-size-5 mb-4">Vendor</h2>
 
         <div class="select">
           <select name="client" v-model="invoice.client">
-            <option value="">- Select client -</option>
+            <option value="">- Select Vendor -</option>
             <option
               v-for="client in clients"
               v-bind:key="client.id"
@@ -64,7 +64,7 @@
       </div>
 
       <div class="column is-12">
-        <h2 class="is-size-5 mb-4">Misc</h2>
+        <!-- <h2 class="is-size-5 mb-4">Misc</h2>
 
         <div class="field">
           <label>Due days</label>
@@ -77,7 +77,7 @@
               placeholder="Due days"
             />
           </div>
-        </div>
+        </div> -->
 
         <div class="field">
           <label>Sender reference</label>
@@ -199,7 +199,8 @@ export default {
       this.invoice.client_place = this.invoice.client.place
       this.invoice.client_country = this.invoice.client.country
       this.invoice.client_contact_person = this.invoice.client.contact_person
-      this.invoice.client_contact_reference = this.invoice.client.contact_reference
+      this.invoice.client_contact_reference =
+        this.invoice.client.contact_reference
       this.invoice.client = this.invoice.client.id
 
       axios

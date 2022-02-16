@@ -7,15 +7,15 @@
 
       <div class="column is-6">
         <div class="box">
-          <h2 class="subtitle">Unpaid invoices</h2>
+          <h2 class="subtitle">Unpaid purchase order</h2>
 
           <table class="table is-fullwidth">
             <thead>
               <tr>
                 <th>#</th>
-                <th>Client</th>
+                <th>Vendor</th>
                 <th>Amount</th>
-                <th>Due date</th>
+                <!-- <th>Due date</th> -->
                 <th></th>
               </tr>
             </thead>
@@ -26,7 +26,7 @@
                   <td>{{ invoice.id }}</td>
                   <td>{{ invoice.client_name }}</td>
                   <td>{{ invoice.gross_amount }}</td>
-                  <td>{{ invoice.get_due_date_formatted }}</td>
+                  <!-- <td>{{ invoice.get_due_date_formatted }}</td> -->
                   <td>
                     <router-link
                       :to="{ name: 'Invoice', params: { id: invoice.id } }"
@@ -36,7 +36,7 @@
                 </tr>
               </template>
               <template v-else>
-                <span>No unpaid invoices...</span>
+                <span>No unpaid purchase order...</span>
               </template>
             </tbody>
           </table>
@@ -45,7 +45,7 @@
 
       <div class="column is-6">
         <div class="box">
-          <h2 class="subtitle">Newest clients</h2>
+          <h2 class="subtitle">Newest Vendors</h2>
           <template v-if="clients.length">
             <div v-for="client in clients" v-bind:key="client.id">
               <div class="box mb-2">

@@ -35,18 +35,18 @@
         </div>
 
         <div class="field">
-          <label>Org. number</label>
+          <label>Phone Number</label>
           <div class="control">
             <input
               type="text"
               class="input"
               v-model="team.org_number"
-              placeholder="Org. number"
+              placeholder="Phone Number"
             />
           </div>
         </div>
 
-        <div class="field">
+        <!-- <div class="field">
           <label>First invoice number</label>
           <div class="control">
             <input
@@ -56,10 +56,10 @@
               placeholder="Invoice number 1"
             />
           </div>
-        </div>
+        </div> -->
 
         <div class="field">
-          <label>Bankaccount</label>
+          <label>GST Number</label>
           <div class="control">
             <input
               type="text"
@@ -126,6 +126,29 @@
               class="input"
               v-model="team.place"
               placeholder="Place"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label>city</label>
+          <div class="control">
+            <input
+              type="text"
+              class="input"
+              v-model="team.city"
+              placeholder="city"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>country</label>
+          <div class="control">
+            <input
+              type="text"
+              class="input"
+              v-model="team.country"
+              placeholder="country"
             />
           </div>
         </div>

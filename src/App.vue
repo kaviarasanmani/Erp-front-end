@@ -3,7 +3,7 @@
     <nav class="navbar is-dark" ole="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item"
-          ><strong>Invoicely</strong></router-link
+          ><strong>Poorvika Mobiles</strong></router-link
         >
         <a
           role="button"
@@ -25,18 +25,21 @@
               >Dashboard</router-link
             >
             <router-link to="/dashboard/clients" class="navbar-item"
-              >Clients</router-link
+              >Vendors</router-link
             >
             <router-link to="/dashboard/invoices" class="navbar-item"
-              >Invoices</router-link
+              >purchase orders</router-link
             >
+            <!-- <router-link to="/dashboard/" class="navbar-item"
+              > Edit purchase orders</router-link
+            > -->
 
             <div class="navbar-item">
               <div class="buttons">
                 <router-link
                   to="/dashboard/invoices/add"
                   class="button is-success"
-                  >Add invoice</router-link
+                  >Add purchase order</router-link
                 >
                 <router-link to="/dashboard/my-account" class="button is-light"
                   >My account</router-link

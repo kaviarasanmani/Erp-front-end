@@ -15,10 +15,20 @@
         </li>
       </ul>
     </nav>
+      <div class="columns is-multiline">
+      <div class="column is-12">
+        <h1 class="title">{{ invoice.id }}</h1>
 
+        <router-link
+          :to="{ name: 'EditInvoice', params: { id: invoice.id }}"
+          class="button is-light mt-4"
+          >Edit</router-link
+        >
+      </div>
+      </div>
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h1 class="title">Invoice - {{ invoice.id }}</h1>
+        <h1 class="title">purchase order - {{ invoice.id }}</h1>
 
         <div class="buttons">
           <button @click="getPdf()" class="button is-dark">Download PDF</button>
@@ -31,22 +41,22 @@
             >
               Set as paid
             </button>
-            <button
+            <!-- <button
               @click="createCreditNote()"
               class="button is-danger"
               v-if="!invoice.is_paid"
             >
               Create credit note
-            </button>
+            </button> -->
           </template>
 
-          <button
+          <!-- <button
             @click="sendReminder()"
             class="button is-info"
             v-if="!invoice.is_paid && !invoice.is_credit_for"
           >
             Send reminder
-          </button>
+          </button> -->
         </div>
       </div>
 
